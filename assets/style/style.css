@@ -17,6 +17,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
   background: var(--secondary);
+  height: 120%;
 }
 section {
   max-width: 90vw;
@@ -53,6 +54,16 @@ a:nth-of-type(12) {
   animation-duration: 1.2s;
   animation-iteration-count: 1;
 }
+.sink {
+  animation-name: sink;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
+.change{
+  background: pink;
+}
 
 @keyframes jump {
   0% {
@@ -79,3 +90,26 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+@keyframes sink {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(5rem) rotate(10deg);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(0.5rem) rotate(-2deg);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
