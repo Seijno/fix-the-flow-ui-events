@@ -20,15 +20,15 @@ function sink(){
 }
 
 let development = document.querySelector('#development');
-development.addEventListener('mouseleave', jump);
-function jump() {
-  development.classList.toggle('jump')
+development.addEventListener('mouseleave', rotateRight);
+function rotateRight() {
+  development.classList.toggle('rotateRight')
 }
 
 let sprint5 = document.querySelector('#sprint5');
-sprint5.addEventListener('mouseenter', jumpenter);
-function jumpenter() {
-  sprint5.classList.toggle('jump')
+sprint5.addEventListener('mouseenter', away);
+function away() {
+  sprint5.classList.toggle('away')
 }
 
 let fix = document.querySelector('#fix');
@@ -38,25 +38,25 @@ function jumpdown() {
 }
 
 let the = document.querySelector('#the');
-the.addEventListener('mouseout', jumpout);
-function jumpout() {
-  the.classList.toggle('jump')
+the.addEventListener('mouseout', bigBoy);
+function bigBoy() {
+  the.classList.toggle('bigBoy')
 }
 
 let flow = document.querySelector('#flow');
-flow.addEventListener('mouseup', jumpup);
-function jumpup() {
-  flow.classList.toggle('jump')
+flow.addEventListener('mouseup', color);
+function color() {
+  flow.classList.toggle('colorChange')
 }
 
 let user = document.querySelector('#user');
-user.addEventListener('keydown', jumpkey);
-function jumpkey() {
-  user.classList.toggle('jump')
+user.addEventListener('keydown', rotateLeft);
+function rotateLeft() {
+  user.classList.toggle('rotateLeft')
 }
 
 let interface = document.querySelector('#interface');
 interface.addEventListener('pointermove', jumppointer);
 function jumppointer() {
-  interface.classList.toggle('jump')
+  interface.classList.toggle('borderGone')
 }

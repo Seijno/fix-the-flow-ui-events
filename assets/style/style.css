@@ -16,7 +16,7 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
-  background: var(--secondary);
+  background: #050840;
   height: 120%;
 }
 section {
@@ -26,7 +26,7 @@ a {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 0.8em;
-  background: var(--secondary);
+  background: #050840;
   color: var(--highlight-primary);
   border: var(--line) solid var(--highlight-primary);
   border-radius: var(--pill);
@@ -50,12 +50,6 @@ a:nth-of-type(12) {
 
 .jump {
   animation-name: jump;
-  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
-  animation-duration: 1.2s;
-  animation-iteration-count: 1;
-}
-.sink {
-  animation-name: sink;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 1.2s;
   animation-iteration-count: 1;
@@ -90,6 +84,12 @@ a:nth-of-type(12) {
 }
 
 /* Jouw animaties */
+.sink {
+  animation-name: sink;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+}
+
 @keyframes sink {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -111,5 +111,81 @@ a:nth-of-type(12) {
   }
   100% {
     transform: scale(1, 1) translateY(0);
+  }
+}
+.rotateRight{
+  animation-name: rotateRight;
+  animation-duration: 2s;
+}
+
+@keyframes rotateRight{
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(-1turn)
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}
+
+.away{
+  animation-name: away;
+  animation-duration: 4s;
+}
+
+@keyframes away{
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100% ;
+  }
+}
+
+.bigBoy{
+  padding: 2rem 4rem;
+  transition: 2s;
+}
+
+.colorChange{
+  background: red;
+  transition: 5s;
+}
+.rotateLeft{
+  animation-name: rotateLeft;
+  animation-duration: 2s;
+}
+
+@keyframes rotateLeft{
+  0% {
+    transform: rotate(0turn);
+  }
+  50% {
+    transform: rotate(1turn)
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}
+
+.borderGone{
+  animation-name: borderGone;
+  animation-duration: 2s;
+}
+
+@keyframes borderGone{
+  0% {
+    border-radius: var(--pill);
+  }
+  50% {
+    border-radius: 0px;
+  }
+  100% {
+    border-radius: var(--pill);
   }
 }
